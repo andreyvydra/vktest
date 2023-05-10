@@ -1,0 +1,246 @@
+openapi: 3.0.2
+info:
+  title: 'User and Friends API'
+  version: '0.0.1'
+paths:
+  /api/user/{user}/invites:
+    get:
+      operationId: listShowInvitesAPIs
+      description: ''
+      parameters:
+      - name: user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/user/{user}/sent_invites:
+    get:
+      operationId: listShowSentInvitesAPIs
+      description: ''
+      parameters:
+      - name: user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/user/{user}/friends:
+    get:
+      operationId: listShowFriendsAPIs
+      description: ''
+      parameters:
+      - name: user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/user/{from_user}/status/{to_user}:
+    get:
+      operationId: retrieveUserStatusAPI
+      description: ''
+      parameters:
+      - name: from_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: to_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/create_user:
+    post:
+      operationId: createCreateUserAPI
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/user/{from_user}/invite/{to_user}:
+    post:
+      operationId: createInviteAPI
+      description: ''
+      parameters:
+      - name: from_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: to_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/user/{to_user}/accept/{from_user}:
+    post:
+      operationId: createAcceptInviteAPI
+      description: ''
+      parameters:
+      - name: to_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: from_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/user/{to_user}/decline/{from_user}:
+    post:
+      operationId: createDeclineInviteAPI
+      description: ''
+      parameters:
+      - name: to_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: from_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/user/{from_user}/delete_friend/{to_user}:
+    post:
+      operationId: createDeleteFriendAPI
+      description: ''
+      parameters:
+      - name: from_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: to_user
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
